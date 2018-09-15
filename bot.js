@@ -342,4 +342,13 @@ client.on('message', message => {
     }
 });
 
+    client.on('ready', () => {
+     client.user.setActivity("Type | 1Play .",{type: 'Playing'});
+
+});
+
+client.on('ready', () => {
+    client.channels.find(c => c.id === '490245960195112970').join();
+});
+
 client.login(process.env.BOT_TOKEN);
