@@ -247,7 +247,7 @@ client.on('message', async msg => {
 	return undefined;
 });
 
-async function handleVideo(video, msg, voiceChannel, playlist = false) {
+async function handleVideo(video, msg, voiceChannel, playlist = true) {
 	const serverQueue = queue.get(msg.guild.id);
 	console.log(video);
 	
@@ -292,7 +292,7 @@ function play(guild, song) {
 	const serverQueue = queue.get(guild.id);
 
 		if (!song) {
-		serverQueue.voiceChannel.set();
+		serverQueue.voiceChannel.join();
 		queue.delete(guild.id);
 		return;
 	}
