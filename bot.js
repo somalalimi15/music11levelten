@@ -313,31 +313,28 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'help') {
+    if (message.content === '2help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (1)**')
-        .addField('play', 'لتشغيل اغنية')
-        .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('skip', 'تخطي الأغنية')
-        .addField('pause', 'ايقاف الاغنية مؤقتا')
-        .addField('resume', 'تكملة الاغنية')
-        .addField('queue', 'اظهار قائمة التشغيل')
-        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
-        .setFooter('(general_commands) لاظهار الاوامر العامة')
+        .addField('**__Play__**', '**لتشغيل اغنية**')
+        .addField('**__Join__**', '**دخول رومك الصوتي**')
+        .addField('**__Disconnect__**', '**الخروج من رومك الصوتي**')
+        .addField('**__Skip__**', '**تخطي الأغنية**')
+        .addField('**__Pause__**', '**ايقاف الاغنية مؤقتا**')
+        .addField('**__Resume__**', '**تكملة الاغنية**')
+        .addField('**__Queue__**', '**اظهار قائمة التشغيل**')
+        .addField('**__Np__**', '**اظهار الاغنية اللي انت مشغلها حاليا**')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    if (message.content === 'general_commands') {
+    if (message.content === 'اوامر عامة') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
-        .addField('avatar', "افاتار الشخص المطلوب")
-        .addField('gif', 'البحث عن جيف انت تطلبه')
-        .addField('ping', 'معرفة ping البوت')
-        .setFooter('المزيد قريبا ان شاء الله!')
+        .addField('Avatar', "**افاتار الشخص المطلوب**")
+        .addField('Gif', '**البحث عن جيف انت تطلبه**')
+        .addField('Ping', 'معرفة**ء ping البوت**')
       message.channel.send(helpEmbed);
     }
 });
