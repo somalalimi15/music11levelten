@@ -344,9 +344,9 @@ client.on('message', message => {
 
 });
 
-  client.on('message', message => {
-  if (!message.guild) return;
 
+});
+  
   if (message.content === '1play') {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
@@ -359,7 +359,7 @@ client.on('message', message => {
     }
   }
 });
-  
+
 
 client.on('ready', () => {
     client.channels.find(c => c.id === '490245960195112970').join();
